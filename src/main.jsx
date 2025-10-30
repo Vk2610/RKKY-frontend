@@ -5,7 +5,7 @@ import "./index.css";
 // import { AdminSection, SuperAdminSection, UserSection } from "./components/forms/MadarAarjB";
 // import App from "./App.jsx";
 // import ProfilePage from "./pages/ProfilePage.jsx";
-// import MadatAarj from "./components/forms/MadatAarjA.jsx";
+import MadatAarj from "./components/forms/MadatAarjA.jsx";
 
 // createRoot(document.getElementById("root")).render(
 //     <div style={{ padding: "40px", background: "#f9fafb", minHeight: "100vh" }}>
@@ -20,5 +20,5 @@ import "./index.css";
 // );
 
 createRoot(document.getElementById("root")).render(
-    
+    <MadatAarj/>
 );
