@@ -108,13 +108,15 @@
 // export default App;
 
 import { Routes, Route } from "react-router-dom";
-import HomePage, { Scheme1Page, Scheme2Page } from "./pages/HomePage";
+import HomePage from "./pages/HomePage.jsx";
+import Scheme1 from "./scheme1/Scheme1.jsx";
+import Scheme2Page from "./Scheme2Page.jsx";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/scheme1" element={<Scheme1Page />} />
+      <Route path="/scheme1/*" element={<Scheme1 />} />
       <Route path="/scheme2" element={<Scheme2Page />} />
     </Routes>
   );

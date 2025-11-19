@@ -10,23 +10,23 @@ function LoginPage() {
     e.preventDefault();
     console.log("Login form submitted");
 
-    // try {
-    //   const response = await axios.post("http://localhost:3000/auth/login", {
-    //     HRMS_No,
-    //     password,
-    //   });
+    try {
+      const response = await axios.post("http://localhost:3000/auth/login", {
+        hrmsNo,
+        password,
+      });
 
-    //   const token = response.data.token;
-    //   localStorage.setItem("token", token);
-    //   const decoded = jwtDecode(token);
-    //   const role = decoded.role;
-    //   localStorage.setItem("role", role);
-    //   navigate(`/${role}`);
-    // } catch (err) {
-    //   setError(
-    //     err.response?.data?.message || "Login failed. Please try again."
-    //   );
-    // }
+      const token = response.data.token;
+      localStorage.setItem("token", token);
+      const decoded = jwtDecode(token);
+      const role = decoded.role;
+      localStorage.setItem("role", role);
+      navigate(`/${role}`);
+    } catch (err) {
+      setError(
+        err.response?.data?.message || "Login failed. Please try again."
+      );
+    }
   };
 
   return (
